@@ -1,0 +1,394 @@
+if not game:IsLoaded() then
+game.Loaded:Wait()
+end
+local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+
+-- Instances For UI1:
+local OpenGui = Instance.new("ScreenGui")
+local OpenFrame = Instance.new("Frame")
+local OpenTextButton = Instance.new("TextButton")
+
+-- Instances For UI2:
+local LazarusHub = Instance.new("ScreenGui")
+local FrameMainGui = Instance.new("Frame")
+local CreditsMainGui = Instance.new("TextButton")
+local Button1 = Instance.new("TextButton")
+local Button2 = Instance.new("TextButton")
+local Button3 = Instance.new("TextButton")
+local Button4 = Instance.new("TextButton")
+local Button5 = Instance.new("TextButton")
+local Button6 = Instance.new("TextButton")
+local Button7 = Instance.new("TextButton")
+local Button8 = Instance.new("TextButton")
+local Button9 = Instance.new("TextButton")
+local Button10 = Instance.new("TextButton")
+local Button11 = Instance.new("TextButton")
+local Button12 = Instance.new("TextButton")
+local Button13 = Instance.new("TextButton")
+local Button14 = Instance.new("TextButton")
+local Button15 = Instance.new("TextButton")
+local Button16 = Instance.new("TextButton")
+
+--Properties For UI1:
+OpenGui.Name = "OpenGui"
+OpenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+OpenGui.ResetOnSpawn = false
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = OpenGui
+OpenFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+--OpenFrame.Position = UDim2.new(-0.000374964962, 0, 0.674931288, 0)
+OpenFrame.Position = UDim2.new(-0.000374964962, 0, 0.924931288, 0)
+OpenFrame.Size = UDim2.new(0, 102, 0, 44)
+OpenFrame.Style = Enum.FrameStyle.RobloxRound
+
+OpenTextButton.Name = "OpenTextButton"
+OpenTextButton.Parent = OpenFrame
+OpenTextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenTextButton.Position = UDim2.new(0.0754004791, 0, 0.0975154564, 0)
+OpenTextButton.Size = UDim2.new(0, 73, 0, 23)
+OpenTextButton.Font = Enum.Font.SourceSans
+OpenTextButton.Text = "OPEN"
+OpenTextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+OpenTextButton.TextSize = 19.000
+OpenTextButton.MouseButton1Click:Connect(function()
+    OpenGui.Enabled = false
+    LazarusHub.Enabled = true
+end)
+
+--Properties UI2:
+LazarusHub.Name = "LazarusHub"
+LazarusHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LazarusHub.ResetOnSpawn = false
+LazarusHub.Enabled = false
+
+FrameMainGui.Draggable = true
+FrameMainGui.Active = true
+FrameMainGui.Selectable = true
+FrameMainGui.Name = "FrameMainGui"
+FrameMainGui.Parent = LazarusHub
+FrameMainGui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FrameMainGui.BorderSizePixel = 0
+FrameMainGui.Position = UDim2.new(0.0637090653, 0, 0.175619841, 0)
+FrameMainGui.Size = UDim2.new(0, 486, 0, 293)
+FrameMainGui.Style = Enum.FrameStyle.RobloxRound
+
+CreditsMainGui.Name = "CreditsMainGui"
+CreditsMainGui.Parent = FrameMainGui
+CreditsMainGui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsMainGui.Position = UDim2.new(0.00993009936, 0, 0.0290699191, 0)
+CreditsMainGui.Size = UDim2.new(0, 461, 0, 36)
+CreditsMainGui.Font = Enum.Font.SourceSans
+CreditsMainGui.Text = "Lazarus CMDS Hub (Credits To Scripts/UI Makers)" -- Title here
+CreditsMainGui.TextColor3 = Color3.fromRGB(0, 0, 0)
+CreditsMainGui.TextSize = 27.000 --Changes text size of title (lower it if your title is too long to make it look normal)
+CreditsMainGui.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer:WaitForChild("PlayerGui").LazarusHub.Enabled = false
+    game.Players.LocalPlayer:WaitForChild("PlayerGui").OpenGui.Enabled = true
+end)
+
+Button1.Name = "Button1"
+Button1.Parent = FrameMainGui
+Button1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button1.Position = UDim2.new(0.0252264254, 0, 0.235691682, 0)
+Button1.Size = UDim2.new(0, 97, 0, 38)
+Button1.Font = Enum.Font.SourceSans
+Button1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button1.TextSize = 14.000
+Button1.Text = "Infinite Yield" -- changes button name
+Button1.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Button2.Name = "Button2"
+Button2.Parent = FrameMainGui
+Button2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button2.Position = UDim2.new(0.272566289, 0, 0.235691682, 0)
+Button2.Size = UDim2.new(0, 97, 0, 38)
+Button2.Font = Enum.Font.SourceSans
+Button2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button2.TextSize = 14.000
+Button2.Text = "Reviz Admin" -- changes button name
+Button2.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/Caniwq2N'))()
+end)
+
+Button3.Name = "Button3"
+Button3.Parent = FrameMainGui
+Button3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button3.Position = UDim2.new(0.507691622, 0, 0.235691682, 0)
+Button3.Size = UDim2.new(0, 97, 0, 38)
+Button3.Font = Enum.Font.SourceSans
+Button3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button3.TextSize = 14.000
+Button3.Text = "Fates Admin (FS)" -- changes button name
+Button3.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LazarTM/FatesAdminFS/main/FatesAdminFS'))()
+end)
+
+Button4.Name = "Button4"
+Button4.Parent = FrameMainGui
+Button4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button4.Position = UDim2.new(0.757089078, 0, 0.235691682, 0)
+Button4.Size = UDim2.new(0, 97, 0, 38)
+Button4.Font = Enum.Font.SourceSans
+Button4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button4.TextSize = 14.000
+Button4.Text = "World Teleports" -- changes button name
+Button4.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/C39cfVy1'),true))()
+end)
+
+Button5.Name = "Button5"
+Button5.Parent = FrameMainGui
+Button5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button5.Position = UDim2.new(0.024578806, 0, 0.430230945, 0)
+Button5.Size = UDim2.new(0, 97, 0, 38)
+Button5.Font = Enum.Font.SourceSans
+Button5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button5.TextSize = 14.000
+Button5.Text = "Chat & Whisper Spy" -- changes button name
+Button5.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/LazarTM/ChatWhisperSpy/main/ChatWhisperSpy'),true))()
+end)
+
+Button6.Name = "Button6"
+Button6.Parent = FrameMainGui
+Button6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button6.Position = UDim2.new(0.271492392, 0, 0.430230945, 0)
+Button6.Size = UDim2.new(0, 97, 0, 38)
+Button6.Font = Enum.Font.SourceSans
+Button6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button6.TextSize = 14.000
+Button6.Text = "Funny Dances" -- changes button name
+Button6.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/LazarTM/FunnyDances/main/FunnyDances'),true))()
+end)
+
+Button7.Name = "Button7"
+Button7.Parent = FrameMainGui
+Button7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button7.Position = UDim2.new(0.506060302, 0, 0.430230945, 0)
+Button7.Size = UDim2.new(0, 97, 0, 38)
+Button7.Font = Enum.Font.SourceSans
+Button7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button7.TextSize = 14.000
+Button7.Text = "Cords Finder" -- changes button name
+Button7.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://grfbin.ml/scripts/coordsfinderv3.lua'))()
+end)
+
+Button8.Name = "Button8"
+Button8.Parent = FrameMainGui
+Button8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button8.Position = UDim2.new(0.755031466, 0, 0.430230945, 0)
+Button8.Size = UDim2.new(0, 97, 0, 38)
+Button8.Font = Enum.Font.SourceSans
+Button8.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button8.TextSize = 14.000
+Button8.Text = "Chat Translator" -- changes button name
+Button8.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGetAsync('https://i.qts.life/r/ChatInlineTranslator.lua', true))()
+end)
+
+Button9.Name = "Button9"
+Button9.Parent = FrameMainGui
+Button9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button9.Position = UDim2.new(0.024578806, 0, 0.617944241, 0)
+Button9.Size = UDim2.new(0, 97, 0, 38)
+Button9.Font = Enum.Font.SourceSans
+Button9.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button9.TextSize = 14.000
+Button9.Text = "Anti Display Name" -- changes button name
+Button9.MouseButton1Click:Connect(function()
+    local AntiDisplayName = loadstring(game:HttpGet('https://pastebin.com/raw/hCMXnKWa'))(function()
+        getgenv().Preferences = {}
+    end)
+    
+    Preferences = {
+        RetroNaming = true,
+        ShowOriginalName = true,
+        ApplyToLeaderboard = true,
+        IdentifyFriends = {Toggle = true, Identifier = '[Friend]'},
+        IdentifyBlocked = {Toggle = true, Identifier = '[Blocked]'},
+        IdentifyPremium = {Toggle = true, Identifier = '[Premium]'},
+        IdentifyDeveloper = {Toggle = true, Identifier = '[Game Dev]'},
+        SpoofLocalPlayer = {Toggle = false, UseRandomName = true, NewName = 'Random Name Lol'},
+        Orientation = 'Horizontal'
+    }
+end)
+
+Button10.Name = "Button10"
+Button10.Parent = FrameMainGui
+Button10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button10.Position = UDim2.new(0.271492392, 0, 0.617944241, 0)
+Button10.Size = UDim2.new(0, 97, 0, 38)
+Button10.Font = Enum.Font.SourceSans
+Button10.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button10.TextSize = 14.000
+Button10.Text = "Blackhole" -- changes button name
+Button10.MouseButton1Click:Connect(function()
+    sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 9e9)
+end)
+
+Button11.Name = "Button11"
+Button11.Parent = FrameMainGui
+Button11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button11.Position = UDim2.new(0.506060302, 0, 0.617944241, 0)
+Button11.Size = UDim2.new(0, 97, 0, 38)
+Button11.Font = Enum.Font.SourceSans
+Button11.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button11.TextSize = 14.000
+Button11.Text = "Queue Kick All" -- changes button name
+Button11.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+        if key == "[" then
+            game.Players.LocalPlayer.Character.PowerOutput:Destroy()
+        end
+    end)
+    
+    game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+        if key == "[" then
+            game.TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Quad), {CFrame = CFrame.new(2658, 3945, -2516)}):Play()
+        end
+    end)
+    
+    game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+        if key == "]" then
+            task.wait(0.15)
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Bring%20All'))()
+        end
+    end)
+    
+    game.Workspace["Wormhole"].TouchInterest:remove()
+end)
+
+Button12.Name = "Button12"
+Button12.Parent = FrameMainGui
+Button12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button12.Position = UDim2.new(0.755031466, 0, 0.617944241, 0)
+Button12.Size = UDim2.new(0, 97, 0, 38)
+Button12.Font = Enum.Font.SourceSans
+Button12.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button12.TextSize = 14.000
+Button12.Text = "System Lazarus" -- changes button name
+Button12.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LazarTM/PrintCMDS/main/PrintLazarusCMDS'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LazarTM/SystemLazarusPrivate/main/SystemLazarusPrivate'))()
+end)
+
+Button13.Name = "Button13"
+Button13.Parent = FrameMainGui
+Button13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button13.Position = UDim2.new(0.024578806, 0, 0.805657566, 0)
+Button13.Size = UDim2.new(0, 97, 0, 38)
+Button13.Font = Enum.Font.SourceSans
+Button13.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button13.TextSize = 14.000
+Button13.Text = "Server Lagger" -- changes button name
+Button13.MouseButton1Click:Connect(function()
+    while wait(0.6) do --// don't change it's the best
+        game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge)
+        local function getmaxvalue(val)
+        local mainvalueifonetable = 499999
+        if type(val) ~= "number" then
+            return nil
+        end
+        local calculateperfectval = (mainvalueifonetable/(val+2))
+        return calculateperfectval
+    end
+    local function bomb(tableincrease, tries)
+    local maintable = {}
+    local spammedtable = {}
+    table.insert(spammedtable, {})
+    z = spammedtable[1]
+    for i = 1, tableincrease do
+        local tableins = {}
+        table.insert(z, tableins)
+        z = tableins
+    end
+    local calculatemax = getmaxvalue(tableincrease)
+    local maximum
+    if calculatemax then
+        maximum = calculatemax
+        else
+            maximum = 999999
+        end
+        for i = 1, maximum do
+            table.insert(maintable, spammedtable)
+        end
+        for i = 1, tries do
+            game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
+        end
+    end
+    -- first number:tableincrease, second number:tries
+    bomb(45, 4) --// change values if client crashes
+    end
+end)
+
+Button14.Name = "Button14"
+Button14.Parent = FrameMainGui
+Button14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button14.Position = UDim2.new(0.271492392, 0, 0.805657566, 0)
+Button14.Size = UDim2.new(0, 97, 0, 38)
+Button14.Font = Enum.Font.SourceSans
+Button14.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button14.TextSize = 14.000
+Button14.Text = "Lowest Server TP" -- changes button name
+Button14.MouseButton1Click:Connect(function()
+    local Http = game:GetService("HttpService")
+    local TPS = game:GetService("TeleportService")
+    local Api = "https://games.roblox.com/v1/games/"
+    
+    local _place = game.PlaceId
+    local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+    function ListServers(cursor)
+        local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+        return Http:JSONDecode(Raw)
+    end
+    
+    local Server, Next; repeat
+    local Servers = ListServers(Next)
+        Server = Servers.data[1]
+        Next = Servers.nextPageCursor
+    until Server
+    TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+end)
+
+Button15.Name = "Button15"
+Button15.Parent = FrameMainGui
+Button15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button15.Position = UDim2.new(0.506060302, 0, 0.805657566, 0)
+Button15.Size = UDim2.new(0, 97, 0, 38)
+Button15.Font = Enum.Font.SourceSans
+Button15.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button15.TextSize = 14.000
+Button15.Text = "Server Hop" -- changes button name
+Button15.MouseButton1Click:Connect(function()
+    local x = {}
+    for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+        if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= game.JobId then
+            x[#x + 1] = v.id
+        end
+    end
+    if #x > 0 then
+        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
+    end
+end)
+
+Button16.Name = "Button16"
+Button16.Parent = FrameMainGui
+Button16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button16.Position = UDim2.new(0.752973855, 0, 0.805657566, 0)
+Button16.Size = UDim2.new(0, 97, 0, 38)
+Button16.Font = Enum.Font.SourceSans
+Button16.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button16.TextSize = 14.000
+Button16.Text = "Rejoin" -- changes button name
+Button16.MouseButton1Click:Connect(function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+end)
